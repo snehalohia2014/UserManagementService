@@ -45,6 +45,10 @@ public class UserController {
             userServiceImpl.deleteUser(userId);
         }
 
+        @GetMapping("user")
+        public String getuser(){
+            return "Hello";
+        }
         @ExceptionHandler
         public ResponseEntity<String> respondWithError(Exception e) {
             logger.error("Exception Occurred. Details : {}", e.getMessage());
